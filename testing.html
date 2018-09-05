@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Values</title>
+    <script src="jquery-3.1.0.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <select id="dropdownList">
+    <option value="">Option 1</option>
+    <option value="">Option 2</option>
+    <option value="">Option 3</option>
+    <option value="">Option 4</option>
+    <option value="">Option 5</option>
+</select>
+  </body>
+  <script type="text/javascript">
+  $(document).ready(function(){
+  $('#dropdownList').on('change',function(){
+      //var optionValue = $(this).val();
+      //var optionText = $('#dropdownList option[value="'+optionValue+'"]').text();
+      var optionText = $("#dropdownList option:selected").text();
+      alert("Selected Option Text: "+optionText);
+  });
+});
+  </script>
+</html>
